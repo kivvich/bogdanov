@@ -111,30 +111,24 @@ elseif ($x<$y) echo ("Наибольшее =" . $y);
 else print ("Наибольшего нет");
 ?></p></p>
 <p><b>Упражнение №3</b> <p> Switch: <br>
+
 <?php
 if (isset($_REQUEST['per1']))
 	{
 	$text2 = "Переменная а равна А";
-	$а = A;
+	$e = "A";
 	}
 else if (isset($_REQUEST['per2']))
+{
 	$text2 = "Переменная а равна B";
-	$а = B;
+	$e = "B";
 	}
 else if (isset($_REQUEST['per3']))
 	{
 	$text2 = "Переменная а равна C";
-	$а = C;
+	$e = "C";
 	}
-?>
- <form>
-<input type="text" size="40" value="<?php echo $text2; ?>" disabled>
-<input type="submit" name="per1" value="a = A" />
-<input type="submit" name="per2" value="a = B" /><br>
-<input type="submit" name="per3" value="a = C" />
-</form>
-<?php
-switch ($а) {
+switch ($e) {
 case 'А' :
  echo 'Переменная имеет значение "А"'; break;
 case 'В':
@@ -143,6 +137,49 @@ default:
  echo 'Ответ не найден' ;
 }
 ?>
+<p> Без break: <br>
+<?php switch ($e) {
+case 'А' :
+ echo 'Переменная имеет значение "А"';
+case 'В':
+ echo 'Переменная имеет значение "В"'; break;
+default:
+ echo 'Ответ не найден' ;
+}
+?>
+ <form>
+<input type="text" size="40" value="<?php echo $text2; ?>" disabled>
+<input type="submit" name="per1" value="a = A" />
+<input type="submit" name="per2" value="a = B" /><br>
+<input type="submit" name="per3" value="a = C" />
+</form>
+<p><b>Упражнение №4</b> <p> Switch: <br>
+<?php
+$dn=rand(1,7);
+print ($dn ." - номер дня недели <br>");
+switch ($dn) {
+case 1: print ("это понедельник"); break;
+case 2: print ("это вторник"); break;
+case 3: print ("это среда"); break;
+case 4: print ("это четверг"); break;
+case 5: print ("это пятница"); break;
+case 6: print ("это суббота"); break;
+case 7: print ("это воскресенье");
+}
+?>
+<p><b>Упражнение №5</b> <p> Циклы: <br>
+<?php
+$var = 5; $i = 0;
+while (++$i <= $var)
+ { echo $i . ' '; }
+?>
+<br>
+<?php
+$var = 6; $i = 0;
+while (++$i < $var)
+ { echo ($var - $i) . ' '; }
+?>
+
    </div>
    <div id="footer">Богданов М.</div>
   </div> 
