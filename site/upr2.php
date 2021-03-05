@@ -110,20 +110,38 @@ if ($x>$y) echo("Наибольшее =" . $x);
 elseif ($x<$y) echo ("Наибольшее =" . $y);
 else print ("Наибольшего нет");
 ?></p></p>
-<p><b>Упражнение №4</b> <p> Работа с константой: <br>
-<?php 
-$num_E = 2.71828;
-$num_E1 = 2.71828;
-$num_E2 = 2.71828;
-$num_E3 = 2.71828;
-echo 'Число е равно ' . $num_E . '<br>';
-print ('$num_E = ' . $num_E . ' - ' . gettype($num_E) . '<br>');
-settype($num_E1, "boolean");
-print ('$num_E = ' . $num_E1 . ' - ' . gettype($num_E1) . '<br>');
-settype($num_E2, "string");
-print ('$num_E = ' . $num_E2 . ' - ' . gettype($num_E2) . '<br>');
-settype($num_E3, "integer");
-print ('$num_E = ' . $num_E3 . ' - ' . gettype($num_E3) . '<br>');
+<p><b>Упражнение №3</b> <p> Switch: <br>
+<?php
+if (isset($_REQUEST['per1']))
+	{
+	$text2 = "Переменная а равна А";
+	$а = A;
+	}
+else if (isset($_REQUEST['per2']))
+	$text2 = "Переменная а равна B";
+	$а = B;
+	}
+else if (isset($_REQUEST['per3']))
+	{
+	$text2 = "Переменная а равна C";
+	$а = C;
+	}
+?>
+ <form>
+<input type="text" size="40" value="<?php echo $text2; ?>" disabled>
+<input type="submit" name="per1" value="a = A" />
+<input type="submit" name="per2" value="a = B" /><br>
+<input type="submit" name="per3" value="a = C" />
+</form>
+<?php
+switch ($а) {
+case 'А' :
+ echo 'Переменная имеет значение "А"'; break;
+case 'В':
+ echo 'Переменная имеет значение "В"'; break;
+default:
+ echo 'Ответ не найден' ;
+}
 ?>
    </div>
    <div id="footer">Богданов М.</div>
