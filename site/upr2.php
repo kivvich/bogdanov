@@ -179,7 +179,24 @@ $var = 6; $i = 0;
 while (++$i < $var)
  { echo ($var - $i) . ' '; }
 ?>
+<p><b>Упражнение №6</b> <p> While: <br>
+<?php
+$a=rand(1,10); $b=rand(10,20);
+print ("<p> Числа из отрезка [".$a.",".$b."]: <br>");
+while ($a<=$b) { echo $a . "<br>";
+ $a=++$a; }
+?>
 
+<p><b>Упражнение №7</b> <p>Do While: <br>
+<?php
+$a=rand(-5,0);
+$b=rand(0,5);
+print ("<p> Числа из отрезка [".$a.",".$b."]: <br>");
+do {
+echo($a . "<br>");
+$a=++$a; }
+while ($a<=$b);
+?>
    </div>
    <div id="footer">Богданов М.</div>
   </div> 
