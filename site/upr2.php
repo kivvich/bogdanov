@@ -127,11 +127,13 @@ else if (isset($_REQUEST['per3']))
 	{
 	$text2 = "Переменная а равна C";
 	$e = "C";
-	}
+	}?>
+	<?php
 switch ($e) {
-case 'А' :
+	
+case 'A' :
  echo 'Переменная имеет значение "А"'; break;
-case 'В':
+case 'B':
  echo 'Переменная имеет значение "В"'; break;
 default:
  echo 'Ответ не найден' ;
@@ -150,7 +152,7 @@ default:
  <form>
 <input type="text" size="40" value="<?php echo $text2; ?>" disabled>
 <input type="submit" name="per1" value="a = A" />
-<input type="submit" name="per2" value="a = B" /><br>
+<input type="submit" name="per2" value="a = B" />
 <input type="submit" name="per3" value="a = C" />
 </form>
 <p><b>Упражнение №4</b> <p> Switch: <br>
@@ -183,7 +185,7 @@ while (++$i < $var)
 <?php
 $a=rand(1,10); $b=rand(10,20);
 print ("<p> Числа из отрезка [".$a.",".$b."]: <br>");
-while ($a<=$b) { echo $a . "<br>";
+while ($a<=$b) { echo $a . " ";
  $a=++$a; }
 ?>
 
@@ -193,7 +195,7 @@ $a=rand(-5,0);
 $b=rand(0,5);
 print ("<p> Числа из отрезка [".$a.",".$b."]: <br>");
 do {
-echo($a . "<br>");
+echo($a . " ");
 $a=++$a; }
 while ($a<=$b);
 ?>
@@ -203,7 +205,7 @@ $a=rand(1,10);
 $b=rand(10,20);
 print ("<p> Числа из отрезка [".$a.",".$b."]: <br>");
 for ($i=$a; $i<=$b; ++$i) {
- echo($a . "<br>");
+ echo($a . " ");
  $a=++$a; }
 ?>
 <p><b>Упражнение №9</b> <p>Вывод таблицы умножения:<br>

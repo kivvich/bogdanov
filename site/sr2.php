@@ -95,7 +95,7 @@ $k=0; echo "$random. <br>"; ?> Его делители:</b></p>
    {  
 		if ($random % $x==0)  
 		{		
-			echo "$x <br>";
+			echo "$x ";
 			$k++;
 			$q = $q + $x;
 		}
